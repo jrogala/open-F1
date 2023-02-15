@@ -1,0 +1,5 @@
+__pycache__
+.ipynb_checkpoints
+f1cache
+f1thon
+.DS_Store
