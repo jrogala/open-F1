@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title><p>index</p></title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title><p>race</p></title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14572,14 +14572,32 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     </script>
     <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs   celltag_hide-input celltag_hide-output">
 
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="open-F1-index">open F1 index<a class="anchor-link" href="#open-F1-index">&#182;</a></h1>
+<h1 id="%7BBahrain%7D-Grand-Prix-2023">{Bahrain} Grand Prix 2023<a class="anchor-link" href="#%7BBahrain%7D-Grand-Prix-2023">&#182;</a></h1><h2 id="Race-information-:">Race information :<a class="anchor-link" href="#Race-information-:">&#182;</a></h2><ul>
+<li>Date: 5 mars 2023</li>
+<li>Start time: </li>
+<li>Laps: 57</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Starting-grid:">Starting grid:<a class="anchor-link" href="#Starting-grid:">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14599,8 +14617,27 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>2023 1 bahrain quali http://f1.roga.la/gp20231_bahrainquali.html
-2023 1 bahrain race http://f1.roga.la/gp20231_bahrainrace.html
+<pre>|---|        
+ LEC    |---|
+|---|    VER
+ SAI    |---|
+|---|    PER
+ HAM    |---|
+|---|    BOT
+ MAG    |---|
+|---|    ALO
+ RUS    |---|
+|---|    GAS
+ OCO    |---|
+|---|    MSC
+ NOR    |---|
+|---|    ALB
+ ZHO    |---|
+|---|    TSU
+ HUL    |---|
+|---|    RIC
+ STR    |---|
+         LAT
 </pre>
 </div>
 </div>
@@ -14609,15 +14646,28 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Starting-tyre">Starting tyre<a class="anchor-link" href="#Starting-tyre">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">startingTyre</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">laps</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"LapNumber == 1"</span><span class="p">)</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="p">[</span><span class="s2">"Driver"</span><span class="p">,</span> <span class="s2">"Compound"</span><span class="p">]]</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">"Driver"</span><span class="p">)</span>
+<span class="n">startingTyre</span><span class="p">[</span><span class="s2">"Driver Name"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">session</span><span class="o">.</span><span class="n">get_driver</span><span class="p">(</span><span class="n">name</span><span class="p">)[</span><span class="s2">"FullName"</span><span class="p">]</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">startingTyre</span><span class="o">.</span><span class="n">index</span><span class="p">]</span>
+<span class="n">startingTyre</span>
 </pre></div>
 
      </div>
@@ -14625,6 +14675,592 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Compound</th>
+      <th>Driver Name</th>
+    </tr>
+    <tr>
+      <th>Driver</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>LEC</th>
+      <td>SOFT</td>
+      <td>Charles Leclerc</td>
+    </tr>
+    <tr>
+      <th>SAI</th>
+      <td>SOFT</td>
+      <td>Carlos Sainz</td>
+    </tr>
+    <tr>
+      <th>HAM</th>
+      <td>SOFT</td>
+      <td>Lewis Hamilton</td>
+    </tr>
+    <tr>
+      <th>RUS</th>
+      <td>SOFT</td>
+      <td>George Russell</td>
+    </tr>
+    <tr>
+      <th>MAG</th>
+      <td>SOFT</td>
+      <td>Kevin Magnussen</td>
+    </tr>
+    <tr>
+      <th>BOT</th>
+      <td>SOFT</td>
+      <td>Valtteri Bottas</td>
+    </tr>
+    <tr>
+      <th>OCO</th>
+      <td>SOFT</td>
+      <td>Esteban Ocon</td>
+    </tr>
+    <tr>
+      <th>TSU</th>
+      <td>SOFT</td>
+      <td>Yuki Tsunoda</td>
+    </tr>
+    <tr>
+      <th>ALO</th>
+      <td>SOFT</td>
+      <td>Fernando Alonso</td>
+    </tr>
+    <tr>
+      <th>ZHO</th>
+      <td>SOFT</td>
+      <td>Guanyu Zhou</td>
+    </tr>
+    <tr>
+      <th>MSC</th>
+      <td>SOFT</td>
+      <td>Mick Schumacher</td>
+    </tr>
+    <tr>
+      <th>STR</th>
+      <td>SOFT</td>
+      <td>Lance Stroll</td>
+    </tr>
+    <tr>
+      <th>ALB</th>
+      <td>SOFT</td>
+      <td>Alexander Albon</td>
+    </tr>
+    <tr>
+      <th>RIC</th>
+      <td>MEDIUM</td>
+      <td>Daniel Ricciardo</td>
+    </tr>
+    <tr>
+      <th>NOR</th>
+      <td>MEDIUM</td>
+      <td>Lando Norris</td>
+    </tr>
+    <tr>
+      <th>LAT</th>
+      <td>SOFT</td>
+      <td>Nicholas Latifi</td>
+    </tr>
+    <tr>
+      <th>HUL</th>
+      <td>SOFT</td>
+      <td>Nico Hulkenberg</td>
+    </tr>
+    <tr>
+      <th>PER</th>
+      <td>SOFT</td>
+      <td>Sergio Perez</td>
+    </tr>
+    <tr>
+      <th>VER</th>
+      <td>SOFT</td>
+      <td>Max Verstappen</td>
+    </tr>
+    <tr>
+      <th>GAS</th>
+      <td>SOFT</td>
+      <td>Pierre Gasly</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">laps</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Time</th>
+      <th>DriverNumber</th>
+      <th>LapTime</th>
+      <th>LapNumber</th>
+      <th>Stint</th>
+      <th>PitOutTime</th>
+      <th>PitInTime</th>
+      <th>Sector1Time</th>
+      <th>Sector2Time</th>
+      <th>Sector3Time</th>
+      <th>Sector1SessionTime</th>
+      <th>Sector2SessionTime</th>
+      <th>Sector3SessionTime</th>
+      <th>SpeedI1</th>
+      <th>SpeedI2</th>
+      <th>SpeedFL</th>
+      <th>SpeedST</th>
+      <th>IsPersonalBest</th>
+      <th>Compound</th>
+      <th>TyreLife</th>
+      <th>FreshTyre</th>
+      <th>LapStartTime</th>
+      <th>Team</th>
+      <th>Driver</th>
+      <th>TrackStatus</th>
+      <th>IsAccurate</th>
+      <th>LapStartDate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0 days 01:04:14.256000</td>
+      <td>16</td>
+      <td>NaT</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0 days 00:24:54.765000</td>
+      <td>NaT</td>
+      <td>NaT</td>
+      <td>0 days 00:00:42.120000</td>
+      <td>0 days 00:00:23.984000</td>
+      <td>NaT</td>
+      <td>0 days 01:03:50.298000</td>
+      <td>0 days 01:04:14.291000</td>
+      <td>224.0</td>
+      <td>251.0</td>
+      <td>273.0</td>
+      <td>250.0</td>
+      <td>False</td>
+      <td>SOFT</td>
+      <td>1.0</td>
+      <td>True</td>
+      <td>0 days 01:02:34.872000</td>
+      <td>Ferrari</td>
+      <td>LEC</td>
+      <td>1</td>
+      <td>False</td>
+      <td>2022-03-20 15:03:34.889</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0 days 01:05:52.109000</td>
+      <td>16</td>
+      <td>0 days 00:01:37.853000</td>
+      <td>2</td>
+      <td>1</td>
+      <td>NaT</td>
+      <td>NaT</td>
+      <td>0 days 00:00:31.582000</td>
+      <td>0 days 00:00:42.159000</td>
+      <td>0 days 00:00:24.112000</td>
+      <td>0 days 01:04:45.838000</td>
+      <td>0 days 01:05:27.997000</td>
+      <td>0 days 01:05:52.109000</td>
+      <td>226.0</td>
+      <td>250.0</td>
+      <td>273.0</td>
+      <td>284.0</td>
+      <td>False</td>
+      <td>SOFT</td>
+      <td>2.0</td>
+      <td>True</td>
+      <td>0 days 01:04:14.256000</td>
+      <td>Ferrari</td>
+      <td>LEC</td>
+      <td>1</td>
+      <td>True</td>
+      <td>2022-03-20 15:05:14.273</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0 days 01:07:30.381000</td>
+      <td>16</td>
+      <td>0 days 00:01:38.272000</td>
+      <td>3</td>
+      <td>1</td>
+      <td>NaT</td>
+      <td>NaT</td>
+      <td>0 days 00:00:31.635000</td>
+      <td>0 days 00:00:42.404000</td>
+      <td>0 days 00:00:24.233000</td>
+      <td>0 days 01:06:23.744000</td>
+      <td>0 days 01:07:06.148000</td>
+      <td>0 days 01:07:30.381000</td>
+      <td>227.0</td>
+      <td>252.0</td>
+      <td>273.0</td>
+      <td>289.0</td>
+      <td>False</td>
+      <td>SOFT</td>
+      <td>3.0</td>
+      <td>True</td>
+      <td>0 days 01:05:52.109000</td>
+      <td>Ferrari</td>
+      <td>LEC</td>
+      <td>1</td>
+      <td>True</td>
+      <td>2022-03-20 15:06:52.126</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0 days 01:09:08.795000</td>
+      <td>16</td>
+      <td>0 days 00:01:38.414000</td>
+      <td>4</td>
+      <td>1</td>
+      <td>NaT</td>
+      <td>NaT</td>
+      <td>0 days 00:00:31.619000</td>
+      <td>0 days 00:00:42.482000</td>
+      <td>0 days 00:00:24.313000</td>
+      <td>0 days 01:08:02</td>
+      <td>0 days 01:08:44.482000</td>
+      <td>0 days 01:09:08.795000</td>
+      <td>228.0</td>
+      <td>250.0</td>
+      <td>273.0</td>
+      <td>290.0</td>
+      <td>False</td>
+      <td>SOFT</td>
+      <td>4.0</td>
+      <td>True</td>
+      <td>0 days 01:07:30.381000</td>
+      <td>Ferrari</td>
+      <td>LEC</td>
+      <td>1</td>
+      <td>True</td>
+      <td>2022-03-20 15:08:30.398</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0 days 01:10:47.266000</td>
+      <td>16</td>
+      <td>0 days 00:01:38.471000</td>
+      <td>5</td>
+      <td>1</td>
+      <td>NaT</td>
+      <td>NaT</td>
+      <td>0 days 00:00:31.590000</td>
+      <td>0 days 00:00:42.565000</td>
+      <td>0 days 00:00:24.316000</td>
+      <td>0 days 01:09:40.385000</td>
+      <td>0 days 01:10:22.950000</td>
+      <td>0 days 01:10:47.266000</td>
+      <td>229.0</td>
+      <td>253.0</td>
+      <td>273.0</td>
+      <td>289.0</td>
+      <td>False</td>
+      <td>SOFT</td>
+      <td>5.0</td>
+      <td>True</td>
+      <td>0 days 01:09:08.795000</td>
+      <td>Ferrari</td>
+      <td>LEC</td>
+      <td>1</td>
+      <td>True</td>
+      <td>2022-03-20 15:10:08.812</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1118</th>
+      <td>0 days 02:09:55.703000</td>
+      <td>10</td>
+      <td>0 days 00:01:38.204000</td>
+      <td>40</td>
+      <td>3</td>
+      <td>NaT</td>
+      <td>NaT</td>
+      <td>0 days 00:00:31.492000</td>
+      <td>0 days 00:00:42.613000</td>
+      <td>0 days 00:00:24.099000</td>
+      <td>0 days 02:08:48.991000</td>
+      <td>0 days 02:09:31.604000</td>
+      <td>0 days 02:09:55.703000</td>
+      <td>231.0</td>
+      <td>253.0</td>
+      <td>277.0</td>
+      <td>NaN</td>
+      <td>False</td>
+      <td>HARD</td>
+      <td>9.0</td>
+      <td>True</td>
+      <td>0 days 02:08:17.499000</td>
+      <td>AlphaTauri</td>
+      <td>GAS</td>
+      <td>1</td>
+      <td>True</td>
+      <td>2022-03-20 16:09:17.516</td>
+    </tr>
+    <tr>
+      <th>1119</th>
+      <td>0 days 02:11:34.004000</td>
+      <td>10</td>
+      <td>0 days 00:01:38.301000</td>
+      <td>41</td>
+      <td>3</td>
+      <td>NaT</td>
+      <td>NaT</td>
+      <td>0 days 00:00:31.523000</td>
+      <td>0 days 00:00:42.621000</td>
+      <td>0 days 00:00:24.157000</td>
+      <td>0 days 02:10:27.226000</td>
+      <td>0 days 02:11:09.847000</td>
+      <td>0 days 02:11:34.004000</td>
+      <td>232.0</td>
+      <td>248.0</td>
+      <td>277.0</td>
+      <td>299.0</td>
+      <td>False</td>
+      <td>HARD</td>
+      <td>10.0</td>
+      <td>True</td>
+      <td>0 days 02:09:55.703000</td>
+      <td>AlphaTauri</td>
+      <td>GAS</td>
+      <td>1</td>
+      <td>True</td>
+      <td>2022-03-20 16:10:55.720</td>
+    </tr>
+    <tr>
+      <th>1120</th>
+      <td>0 days 02:13:12.333000</td>
+      <td>10</td>
+      <td>0 days 00:01:38.329000</td>
+      <td>42</td>
+      <td>3</td>
+      <td>NaT</td>
+      <td>NaT</td>
+      <td>0 days 00:00:31.453000</td>
+      <td>0 days 00:00:42.692000</td>
+      <td>0 days 00:00:24.184000</td>
+      <td>0 days 02:12:05.457000</td>
+      <td>0 days 02:12:48.149000</td>
+      <td>0 days 02:13:12.333000</td>
+      <td>231.0</td>
+      <td>251.0</td>
+      <td>277.0</td>
+      <td>297.0</td>
+      <td>False</td>
+      <td>HARD</td>
+      <td>11.0</td>
+      <td>True</td>
+      <td>0 days 02:11:34.004000</td>
+      <td>AlphaTauri</td>
+      <td>GAS</td>
+      <td>1</td>
+      <td>True</td>
+      <td>2022-03-20 16:12:34.021</td>
+    </tr>
+    <tr>
+      <th>1121</th>
+      <td>0 days 02:14:50.811000</td>
+      <td>10</td>
+      <td>0 days 00:01:38.478000</td>
+      <td>43</td>
+      <td>3</td>
+      <td>NaT</td>
+      <td>NaT</td>
+      <td>0 days 00:00:31.468000</td>
+      <td>0 days 00:00:42.816000</td>
+      <td>0 days 00:00:24.194000</td>
+      <td>0 days 02:13:43.801000</td>
+      <td>0 days 02:14:26.617000</td>
+      <td>0 days 02:14:50.811000</td>
+      <td>232.0</td>
+      <td>250.0</td>
+      <td>276.0</td>
+      <td>296.0</td>
+      <td>False</td>
+      <td>HARD</td>
+      <td>12.0</td>
+      <td>True</td>
+      <td>0 days 02:13:12.333000</td>
+      <td>AlphaTauri</td>
+      <td>GAS</td>
+      <td>1</td>
+      <td>True</td>
+      <td>2022-03-20 16:14:12.350</td>
+    </tr>
+    <tr>
+      <th>1122</th>
+      <td>0 days 02:16:29.515000</td>
+      <td>10</td>
+      <td>0 days 00:01:38.704000</td>
+      <td>44</td>
+      <td>3</td>
+      <td>NaT</td>
+      <td>NaT</td>
+      <td>0 days 00:00:31.563000</td>
+      <td>0 days 00:00:42.866000</td>
+      <td>0 days 00:00:24.275000</td>
+      <td>0 days 02:15:22.374000</td>
+      <td>0 days 02:16:05.240000</td>
+      <td>0 days 02:16:29.515000</td>
+      <td>230.0</td>
+      <td>253.0</td>
+      <td>277.0</td>
+      <td>298.0</td>
+      <td>False</td>
+      <td>HARD</td>
+      <td>13.0</td>
+      <td>True</td>
+      <td>0 days 02:14:50.811000</td>
+      <td>AlphaTauri</td>
+      <td>GAS</td>
+      <td>1</td>
+      <td>True</td>
+      <td>2022-03-20 16:15:50.828</td>
+    </tr>
+  </tbody>
+</table>
+<p>1123 rows × 27 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+
+</div>
+</div>
+</div>
 </div>
 </body>
 
