@@ -41,7 +41,7 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Build html files
         run: 
-          python3 src/deploy.py
+          python3 deploy.py
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
